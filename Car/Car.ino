@@ -12,7 +12,7 @@ const int input3 = 10;
 const int input4 = 11;
 
 long distance;
-
+           
 void setup() {
   Serial.begin(9600);
   pinMode(enable1, OUTPUT);
@@ -25,21 +25,21 @@ void setup() {
 
 void loop() {
   //ultrasonic
-  distance = ultrasonic.read();
+  //distance = ultrasonic.read();
 
   Serial.print("Distance (cm): ");
-  Serial.println(distance);
+  //Serial.println(distance);
 
-  if(distance <= 10)
-    digitalWrite(enable1, LOW);
-    digitalWrite(enable2, LOW);
+  //if(distance <= 10)
+    //digitalWrite(enable2, LOW);
+    //digitalWrite(enable1, LOW);
     
   delay(500);
   //DC motors
   //digitalWrite(enable1, HIGH);
-  //digitalWrite(input1, LOW);
-  //digitalWrite(input2, HIGH);
+  digitalWrite(input1, LOW);
+  digitalWrite(input2, HIGH);
   //digitalWrite(enable2, HIGH);
-  //digitalWrite(input3, LOW);
-  //digitalWrite(input4, HIGH);
+  digitalWrite(input3, HIGH);
+  digitalWrite(input4, LOW);
 }
