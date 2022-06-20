@@ -30,6 +30,10 @@ void loop() {
   Serial.print("Distance (cm): ");
   Serial.println(distance);
 
+  if(distance <= 10)
+    digitalWrite(enable1, LOW);
+    digitalWrite(enable2, LOW);
+    
   delay(500);
   //DC motors
   //digitalWrite(enable1, HIGH);
