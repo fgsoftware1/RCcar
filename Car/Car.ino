@@ -24,22 +24,29 @@ void setup() {
 }
 
 void loop() {
-  //ultrasonic
-  //distance = ultrasonic.read();
+  //ultrasonic;
+  distance = ultrasonic.read();
 
   Serial.print("Distance (cm): ");
-  //Serial.println(distance);
+  Serial.println(distance);
 
-  //if(distance <= 10)
-    //digitalWrite(enable2, LOW);
-    //digitalWrite(enable1, LOW);
+  if(distance <= 10){
+     digitalWrite(enable2, LOW);
+     digitalWrite(enable1, LOW);
+  }
+  else{
+     //digitalWrite(enable2, HIGH);
+     //digitalWrite(enable1, HIGH);
+     
+     digitalWrite(input1, HIGH);
+     digitalWrite(input2, LOW);
+     digitalWrite(input3, LOW);
+     digitalWrite(input4, HIGH);
+    }
     
-  delay(500);
   //DC motors
-  //digitalWrite(enable1, HIGH);
-  digitalWrite(input1, LOW);
-  digitalWrite(input2, HIGH);
-  //digitalWrite(enable2, HIGH);
-  digitalWrite(input3, HIGH);
-  digitalWrite(input4, LOW);
+  digitalWrite(input1, HIGH);
+  digitalWrite(input2, LOW);
+  digitalWrite(input3, LOW);
+  digitalWrite(input4, HIGH);
 }
