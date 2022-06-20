@@ -16,10 +16,8 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(enable1, HIGH);
-  digitalWrite(input1, LOW);
-  digitalWrite(input2, HIGH);
-  digitalWrite(enable2, HIGH);
+  digitalWrite(input1, HIGH);
+  digitalWrite(input2, LOW);
   digitalWrite(input3, LOW);
   digitalWrite(input4, HIGH);
 }
